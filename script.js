@@ -25,3 +25,41 @@ function showPopup(bool) {
     document.getElementById('popup').style.visibility = 'hidden'
   }
 }
+
+
+//------------------------------------>>To study later <<------------------------------------------
+/*function addRecommendation() {
+  let recommendation = document.getElementById("new_recommendation");
+  
+  if (recommendation.value != null && recommendation.value.trim() != "") {
+    console.log("New recommendation added");
+    showPopup(true);
+    
+    var element = document.createElement("div");
+    element.setAttribute("class", "recommendation");
+    element.innerHTML = "\<span\>&#8220;\</span\>" + recommendation.value + "\<span\>&#8221;\</span\>";
+    document.getElementById("all_recommendations").appendChild(element);
+    
+    // Save the recommendation in localStorage
+    let storedRecommendations = JSON.parse(localStorage.getItem("recommendations") || "[]");
+    storedRecommendations.push(recommendation.value.trim());
+    localStorage.setItem("recommendations", JSON.stringify(storedRecommendations));
+    
+    recommendation.value = "";
+  }
+} 
+  */
+
+  /*Load Recommendations on Page Refresh
+  
+  window.onload = function () {
+  let storedRecommendations = JSON.parse(localStorage.getItem("recommendations") || "[]");
+  storedRecommendations.forEach(rec => {
+    var element = document.createElement("div");
+    element.setAttribute("class", "recommendation");
+    element.innerHTML = "\<span\>&#8220;\</span\>" + rec + "\<span\>&#8221;\</span\>";
+    document.getElementById("all_recommendations").appendChild(element);
+  });
+};
+
+*/
